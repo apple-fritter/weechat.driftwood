@@ -42,10 +42,10 @@ The WeeChat Driftwood Logger logs the following types of data:
 
 ## Usage
 1. Clone this repository to your local machine or download the ZIP file.
-2. Copy the driftwood_logger.py file to the WeeChat plugins directory. (Default location: `~/.weechat/python/autoload/`)
+2. Copy the driftwood.py file to the WeeChat plugins directory. (Default location: `~/.weechat/python/autoload/`)
 3. Launch WeeChat and load the plugin by running the following command:
 ```shell
-/python load autoload/driftwood_logger.py
+/python load autoload/driftwood.py
 ```
 
 ## Flowchart
