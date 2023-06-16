@@ -53,38 +53,36 @@ The WeeChat Driftwood Logger logs the following types of data:
 ```
 ┌─ Start Program
 │
-├─ [Step 1]
-│   ├─ [Step 1.1]
-│   │   ├─ [Step 1.1.1]
-│   │   │   ├─ [Step 1.1.1.1]
-│   │   │   │   └─ [Action]
-│   │   │   │
-│   │   │   ├─ [Step 1.1.1.2]
-│   │   │   └─ [Step 1.1.1.3]
-│   │   │
-│   │   ├─ [Step 1.1.2]
-│   │   └─ [Step 1.1.3]
+├─ [Initialize WeeChat Driftwood Logger]
 │   │
-│   ├─ [Step 1.2]
-│   │   ├─ [Step 1.2.1]
-│   │   ├─ [Step 1.2.2]
-│   │   │   ├─ [Step 1.2.2.1]
-│   │   │   └─ [Step 1.2.2.2]
-│   │   │       └─ [Action]
-│   │   │
-│   │   └─ [Step 1.2.3]
-│   │
-│   └─ [Step 1.3]
+│   ├─ [Load Plugin]
+│   ├─ [Set Log Directory]
+│   ├─ [Create Directory Structure]
+│   └─ [Set Logging Options]
 │
-├─ [Step 2]
-│   ├─ [Step 2.1]
-│   │   ├─ [Step 2.1.1]
-│   │   └─ [Step 2.1.2]
-│   │       ├─ [Step 2.1.2.1]
-│   │       └─ [Step 2.1.2.2]
+├─ [Handle IRC Messages]
 │   │
-│   └─ [Step 2.2]
-│       └─ [Step 2.2.1]
+│   ├─ [Process Private Messages]
+│   │   │
+│   │   ├─ [Filter Non-Message Content]
+│   │   └─ [Log Private Messages]
+│   │
+│   ├─ [Process Channel Messages]
+│   │   │
+│   │   ├─ [Filter Non-Message Content]
+│   │   └─ [Log Channel Messages]
+│   │
+│   ├─ [Process Notices]
+│   │   │
+│   │   ├─ [Filter Non-Message Content]
+│   │   └─ [Log Notices]
+│   │
+│   └─ [Process CTCP Events]
+│       │
+│       ├─ [Filter Non-Message Content]
+│       └─ [Log CTCP Events]
+│
+├─ [Sanitize Filename]
 │
 └─ End Program
 ```
