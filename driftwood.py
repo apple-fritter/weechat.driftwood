@@ -7,10 +7,13 @@ from datetime import datetime
 LOG_DIR = os.path.expanduser("~/logs/weechat-driftwood/")
 
 def sanitize_filename(filename):
-    sanitized = re.sub(r'[^a-zA-Z0-9]', ' ', filename)
-    sanitized = re.sub(r' (?=[a-zA-Z0-9])', '_', sanitized)
-    sanitized = sanitized.rstrip('_')
-    return sanitized
+    # Remove leading and trailing non-alphanumeric characters
+    filename = re.sub(r'^\W+|\W+$', '', filename)
+
+    # Replace non-alphanumeric characters surrounded by alphanumeric characters with a space
+    filename = re.sub(r'(?<=\w)\W+(?=\w)', ' ', filename)
+
+    return filename
 
 def driftwood_logger(data, buffer, date, tags, displayed, highlight, prefix, message):
     # Skip logging server buffers
