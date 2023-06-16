@@ -32,21 +32,19 @@ To ensure proper filename handling and compatibility with various file systems, 
 ## Types of Data Logged
 The WeeChat Driftwood Logger logs the following types of data:
 
-#### Private messages:
-Messages exchanged between users in private conversations.
-#### Channel messages:
-Messages sent within IRC channels.
-#### Notices:
-Various types of notices, such as server notices or user-specific notices.
-#### CTCP events:
-CTCP (Client-to-Client Protocol) events, which include actions, requests, and responses.
+1. Private messages
+> Messages exchanged between users in private conversations
+2. Channel messages
+> Messages sent within IRC channels
+3. Notices
+> Various types of notices, such as server notices or user-specific notices
+4. CTCP events
+> Client-to-Client Protocol events, which include actions, requests, and responses
 
 ## Usage
-- Clone this repository to your local machine or download the ZIP file.
-- Copy the driftwood_logger.py file to the WeeChat plugins directory.
-> Default location: `~/.weechat/python/autoload/`
-
-Launch WeeChat and load the plugin by running the following command:
+1. Clone this repository to your local machine or download the ZIP file.
+2. Copy the driftwood_logger.py file to the WeeChat plugins directory. (Default location: `~/.weechat/python/autoload/`)
+3. Launch WeeChat and load the plugin by running the following command:
 ```shell
 /python load autoload/driftwood_logger.py
 ```
@@ -90,7 +88,6 @@ Launch WeeChat and load the plugin by running the following command:
 │
 └─ End Program
 ```
-## 
 
 ---
 
