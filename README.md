@@ -1,5 +1,5 @@
 # WeeChat Driftwood Logger
-The WeeChat Driftwood Logger is a plugin for WeeChat, a lightweight and extensible IRC client. This plugin enables native logging of IRC messages in the Driftwood log format, providing a standardized and organized way to store and manage IRC logs.
+The WeeChat Driftwood Logger is a plugin for WeeChat, a lightweight and extensible IRC client. This plugin enables native logging of IRC messages in the [Driftwood log format](https://github.com/apple-fritter/driftwood), providing a standardized and organized way to store and manage IRC logs.
 
 ## Features
 - Logs IRC messages in the Driftwood format.
@@ -9,7 +9,7 @@ The WeeChat Driftwood Logger is a plugin for WeeChat, a lightweight and extensib
 - Creates a directory structure based on the Driftwood organizational method.
 
 ## Driftwood Log Format
-The Driftwood log format is a standardized format for IRC logs. It uses a distinctive delimiter character to separate different fields within each log entry. The log format follows these conventions:
+The Driftwood log format is a [standardized format](https://github.com/apple-fritter/driftwood) for IRC logs. It uses a distinctive delimiter character to separate different fields within each log entry. The log format follows these conventions:
 
 #### Columns are separated by the Unicode character (☕).
 - The first column is left blank, and is a placeholder for content suppression, using the character `#`.
@@ -19,13 +19,12 @@ The Driftwood log format is a standardized format for IRC logs. It uses a distin
 - The seventh column is left blank.
 
 ## Sanitization Consideration
-To ensure proper filename handling and compatibility with various file systems, the WeeChat Driftwood Logger sanitizes channel and nick names before creating log files.
+To ensure proper filename handling and compatibility with various file systems, **the WeeChat Driftwood Logger sanitizes channel and nick names before creating log files.**
 
 #### The following sanitization rules are applied:
 
-- Non-alphanumeric characters are replaced with whitespace.
-- If a non-alphanumeric character is followed by an alphanumeric character, it is replaced by a space.
-- Trailing non-alphanumeric characters are removed.
+- Non-alphanumeric characters, mid name, are replaced with whitespace.
+- Leading and trailing non-alphanumeric characters are removed.
 
 > This sanitization process ensures that the log files are named appropriately and conform to file naming conventions.
 
